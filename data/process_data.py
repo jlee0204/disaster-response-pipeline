@@ -12,16 +12,15 @@ def load_data(messages_filepath, categories_filepath):
     # merge datasets
 
     df = messages.merge(categories, left_on='id', right_on='id')
-    print(df.head())
 
-    pass
+    return df
 
 
 def clean_data(df):
     # create a dataframe of the 36 individual category columns
-    categories = df.categories.str.split(";",expand=True,)
+    categories = df['categories'].str.split(";",expand=True)
     # select the first row of the categories dataframe
-    row = categories.loc[0]
+    row = categories.iloc[0]
 
     # use this row to extract a list of new column names for categories.
     # one way is to apply a lambda function that takes everything
@@ -48,13 +47,13 @@ def clean_data(df):
     # drop duplicates
     df.drop_duplicates(subset='id', inplace=True)
 
-    pass
+    return df
 
 
 def save_data(df, database_filename):
-    engine = create_engine('sqlite:///' + database_filename')
-    df.to_sql('DisasterResponse', engine, index=False)
-    pass
+    engine = create_engine('sqlite:///' + database_filename)
+    df.to_sql('DisasterMessage', engine, index=False)
+    return df
 
 
 def main():
