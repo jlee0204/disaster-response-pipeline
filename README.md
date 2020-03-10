@@ -1,5 +1,38 @@
 # Disaster Response Pipeline Project
 
+## Dependencies
+<pre>
+nltk
+json
+numpy
+pandas
+scikit-learn
+sqlalchemy
+plotly
+flask
+re
+pickly
+sys
+
+</pre>
+## Files
+
+<pre>
+
+├── app
+│   └── run.py------------------------# FLASK FILE THAT RUNS APP
+├── data
+│   ├── DisasterResponse.db-----------# DATABASE TO SAVE CLEANED DATA TO
+│   ├── disaster_categories.csv-------# CATEGOrY DATA
+│   ├── disaster_messages.csv---------# MESSAGE DATA
+│   └── process_data.py---------------# PERFORMS ETL PROCESS
+├── models
+│   └── train_classifier.py-----------# PERFORM ML PIPELINE PROCESS
+
+</pre>
+
+
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
