@@ -16,21 +16,28 @@ sys
 
 </pre>
 ## Files
-
 <pre>
 
+(1) Flask APP
+(2) Database
+(3) Category Data
+(4) Message Data
+(5) ETL Process 
+(6) ML Pipeline Process
+
+
 ├── app
-│   └── run.py------------------------# FLASK FILE THAT RUNS APP
+│   └── run.py (1)
 ├── data
-│   ├── DisasterResponse.db-----------# DATABASE TO SAVE CLEANED DATA TO
-│   ├── disaster_categories.csv-------# CATEGOrY DATA
-│   ├── disaster_messages.csv---------# MESSAGE DATA
-│   └── process_data.py---------------# PERFORMS ETL PROCESS
+│   ├── DisasterResponse.db (2)
+│   ├── disaster_categories.csv (3)
+│   ├── disaster_messages.csv (4)
+│   └── process_data.py (5)
 ├── models
-│   └── train_classifier.py-----------# PERFORM ML PIPELINE PROCESS
+│   └── train_classifier.py (6)
+
 
 </pre>
-
 
 
 ### Instructions:
@@ -45,3 +52,7 @@ sys
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+### Acknowledgments:
+
+- Sourcing for Readme found: https://github.com/matiassingers/awesome-readme
