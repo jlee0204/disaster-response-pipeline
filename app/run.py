@@ -1,7 +1,6 @@
 import json
 import plotly
 import pandas as pd
-import numpy as np
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -94,7 +93,7 @@ def go():
 
 
 def main():
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=3001, debug=True)
 
 
 if __name__ == '__main__':
